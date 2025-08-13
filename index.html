@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilos personalizados para un fondo degradado animado */
-        /* Esta sección ya contiene el fondo en degrade que solicitaste, con una animación. */
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(-45deg, #1d4ed8, #0ea5e9, #38bdf8, #00c6ff);
@@ -241,7 +240,7 @@
                     </iframe>
                 </div>
                 
-                <!-- Sección de video adicional (CORREGIDO) -->
+                <!-- Sección de video adicional -->
                 <h3 class="text-2xl font-semibold text-center mt-12 mb-6">Nuevo Video del Documental</h3>
                 <div class="video-container max-w-4xl mx-auto">
                     <!-- Se ha actualizado este enlace con el que proporcionaste en esta solicitud -->
@@ -286,7 +285,7 @@
         <section id="blog" class="container mx-auto px-4 py-16">
             <div class="bg-white/10 p-8 md:p-12 rounded-2xl shadow-xl backdrop-blur-sm text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-10">Blog: Novedades</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="blog-posts">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-posts">
                     <!-- Los posts del blog se renderizarán aquí con JavaScript -->
                 </div>
             </div>
@@ -321,6 +320,7 @@
     <footer class="bg-black/40 text-center py-8 mt-16 rounded-t-xl">
         <div class="container mx-auto">
             <p class="mb-4">© 2025 Vestigios de Conocimientos Ancestrales. Todos los derechos reservados.</p>
+            <h3 class="text-lg font-semibold mb-2">Redes Sociales</h3>
             <div class="flex justify-center space-x-6">
                 <a href="#" class="text-gray-300 hover:text-blue-500 transition-colors"><i class="fab fa-youtube text-2xl"></i></a>
                 <a href="#" class="text-gray-300 hover:text-blue-500 transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
@@ -377,7 +377,7 @@
 
         // --- Simulación de Backend y Contenido Dinámico ---
 
-        // Datos simulados para el blog (mock data)
+        // Datos simulados para el blog
         const mockBlogPosts = [
             {
                 id: 1,
@@ -385,7 +385,8 @@
                 excerpt: "Vestigios de conocimientos ancestrales ha sido recibido con entusiasmo en el Festival de Cine Venezolano de Mérida...",
                 // Reemplaza esta URL con una imagen real del festival o el documental
                 image: "https://placehold.co/600x400/1e293b/ffffff?text=Festival",
-                date: "2024-10-15"
+                date: "2024-10-15",
+                type: "post"
             },
             {
                 id: 2,
@@ -393,15 +394,17 @@
                 excerpt: "El rodaje en la selva amazónica fue una experiencia inolvidable. Te contamos los desafíos y hallazgos...",
                 // Reemplaza esta URL con una imagen real del rodaje
                 image: "https://placehold.co/600x400/1e293b/ffffff?text=Rodaje",
-                date: "2024-11-20"
+                date: "2024-11-20",
+                type: "post"
             },
             {
                 id: 3,
-                title: "Entrevista exclusiva con Miguelángel Tisera",
-                excerpt: "Hablamos con el realizador sobre su inspiración, el proceso creativo y el mensaje de su obra...",
-                // Reemplaza esta URL con una imagen real de la entrevista
+                title: "Entrevista Exclusiva",
+                excerpt: "Lee la entrevista completa con Miguelángel Tisera en Últimas Noticias.",
                 image: "https://placehold.co/600x400/1e293b/ffffff?text=Entrevista",
-                date: "2024-12-05"
+                date: "2024-12-05",
+                type: "button",
+                url: "https://ultimasnoticias.com.ve/cultura/tisera-documento-la-esencia-nacional/"
             }
         ];
         
@@ -430,20 +433,42 @@
                 price: "14.99",
                 // Reemplaza esta URL con una imagen real del DVD
                 image: "https://placehold.co/400x500/1e293b/ffffff?text=DVD"
+            },
+            {
+                id: 4,
+                name: "Libro Documental",
+                description: "Libro que expande la investigación y el proceso de creación del documental.",
+                price: "24.99",
+                // Reemplaza esta URL con una imagen real del libro
+                image: "https://placehold.co/400x500/1e293b/ffffff?text=Libro+Documental"
             }
         ];
 
         // Función para renderizar los posts del blog
         function renderBlogPosts() {
             const blogPostsContainer = document.getElementById('blog-posts');
-            blogPostsContainer.innerHTML = mockBlogPosts.map(post => `
-                <div class="bg-white/10 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow backdrop-blur-sm">
-                    <img src="${post.image}" alt="${post.title}" class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h3 class="text-xl font-semibold mb-2">${post.title}</h3>
-                    <p class="text-gray-300 mb-4">${post.excerpt}</p>
-                    <span class="text-sm text-gray-400">${post.date}</span>
-                </div>
-            `).join('');
+            blogPostsContainer.innerHTML = mockBlogPosts.map(post => {
+                if (post.type === "post") {
+                    return `
+                        <div class="bg-white/10 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow backdrop-blur-sm">
+                            <img src="${post.image}" alt="${post.title}" class="rounded-lg mb-4 w-full h-48 object-cover">
+                            <h3 class="text-xl font-semibold mb-2">${post.title}</h3>
+                            <p class="text-gray-300 mb-4">${post.excerpt}</p>
+                            <span class="text-sm text-gray-400">${post.date}</span>
+                        </div>
+                    `;
+                } else if (post.type === "button") {
+                    return `
+                        <div class="bg-white/10 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow backdrop-blur-sm flex items-center justify-center">
+                            <a href="${post.url}" target="_blank" class="w-full">
+                                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full text-xl transition-transform transform hover:scale-105">
+                                    ${post.title}
+                                </button>
+                            </a>
+                        </div>
+                    `;
+                }
+            }).join('');
         }
 
         // Función para renderizar los productos de la tienda
