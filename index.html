@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestigios de Conocimientos Ancestrales</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos personalizados para un fondo degradado animado */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(-45deg, #1d4ed8, #0ea5e9, #38bdf8, #00c6ff);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+            color: #ecf0f1;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .floating-title {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 8px 16px;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .navbar-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <!-- Título flotante -->
+    <div class="floating-title text-sm md:text-base font-semibold">
+        Creado por Cine & Tv MAT Hypermedia C.A. 2025
+    </div>
+
+    <!-- Barra de navegación (Header) -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-40 navbar-shadow mt-10 rounded-b-xl">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo y nombre de la app -->
+            <a href="#home" class="text-xl md:text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+                VESTIGIOS
+            </a>
+
+            <!-- Menú de navegación principal para desktop -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Inicio</a></li>
+                <li><a href="#about" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">El Documental</a></li>
+                <li><a href="#author" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">El Realizador</a></li>
+                <li><a href="#store" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Tienda</a></li>
+                <li><a href="#blog" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Blog</a></li>
+                <li><a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Contacto</a></li>
+            </ul>
+
+            <!-- Botón de hamburguesa para móvil -->
+            <button class="hamburger block md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Menú de navegación móvil -->
+        <div class="nav-menu absolute top-full left-0 w-full bg-white/90 backdrop-blur-md hidden md:hidden">
+            <ul class="flex flex-col items-center py-4 space-y-4">
+                <li><a href="#home" class="nav-link block text-gray-600 hover:text-blue-600 transition-colors">Inicio</a></li>
+                <li><a href="#about" class="nav-link block text-gray-600 hover:text-blue-600 transition-colors">El Documental</a></li>
+                <li><a href="#author" class="nav-link block text-gray-600 hover:text-blue-600 transition-colors">El Realizador</a></li>
+                <li><a href="#store" class="nav-link block text-gray-600 hover:text-blue-600 transition-colors">Tienda</a></li>
+                <li><a href="#blog" class="nav-link block text-gray-600 hover:text-blue-600 transition-colors">Blog</a></li>
+                <li><a href="#contact" class="nav-link block text-gray-600 hover:text-blue-600 transition-colors">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de inicio (Home) -->
+        <section id="home" class="relative bg-cover bg-center min-h-screen flex items-center justify-center text-center p-4" style="background-image: url('https://placehold.co/1920x1080/0e7490/ffffff?text=VESTIGIOS+DE+CONOCIMIENTOS+ANCESTRALES');">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 max-w-4xl mx-auto p-8 rounded-lg bg-black/60 backdrop-blur-sm">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-up">Vestigios de Conocimientos Ancestrales</h1>
+                <p class="text-lg md:text-xl font-light mb-8 animate-fade-in-up">Un viaje cinematográfico que relata el encuentro con la historia de los pobladores originarios de Suramérica.</p>
+                <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">Descubre la Historia</a>
+            </div>
+        </section>
+
+        <!-- Sección del documental (About) -->
+        <section id="about" class="container mx-auto px-4 py-16">
+            <div class="bg-white/10 p-8 md:p-12 rounded-2xl shadow-xl backdrop-blur-sm">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">El Documental</h2>
+                <div class="md:flex md:space-x-8">
+                    <!-- Ficha Técnica -->
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Ficha Técnica</h3>
+                        <ul class="space-y-2 text-lg">
+                            <li><strong>Título original:</strong> Vestigios de conocimientos ancestrales</li>
+                            <li><strong>Año:</strong> 2023</li>
+                            <li><strong>Duración:</strong> 72 minutos</li>
+                            <li><strong>País:</strong> Venezuela</li>
+                            <li><strong>Idioma:</strong> Español</li>
+                            <li><strong>Dirección:</strong> Miguelángel Tisera</li>
+                            <li><strong>Guion:</strong> Miguelángel Tisera</li>
+                            <li><strong>Producción:</strong> Miguelángel Tisera</li>
+                            <li><strong>Fotografía:</strong> Martín Alvarez, Volkmar Ziegler, Miguelángel Tisera</li>
+                            <li><strong>Género:</strong> Documental</li>
+                        </ul>
+                    </div>
+                    <!-- Sinopsis y más -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Sinopsis</h3>
+                        <p class="text-lg mb-4">
+                            “Vestigios de conocimientos ancestrales” es un viaje cinematográfico que relata el encuentro con la historia de los pobladores originarios de Suramérica. La travesía se adentra en monumentos naturales y sitios arqueológicos de Venezuela, enfrentando diversos acontecimientos que permiten vislumbrar el futuro de territorios mágicos, como el archipiélago de Los Roques y la selva amazónica. Allí, el documental registra los petroglifos más grandes del país y reflexiona sobre el pasado, presente y futuro de las culturas ancestrales, antes de que las lluvias vuelvan a ocultar estos tesoros históricos.
+                        </p>
+                        <h3 class="text-2xl font-semibold mb-4 mt-8 border-b border-gray-400 pb-2">Rodaje y Colaboradores</h3>
+                        <p class="text-lg mb-2"><strong>Locaciones:</strong> Archipiélago de Los Roques, Alto Orinoco, Puerto Ayacucho, Universidad Simón Bolívar.</p>
+                        <p class="text-lg mb-2"><strong>Colaboradores destacados:</strong> Aimé Tillett (antropólogo), Andrzej Antczak (arqueólogo), Mario Sanoja (arqueólogo), entre otros.</p>
+                        <p class="text-lg"><strong>Festivales:</strong> Participó en el Festival del Cine Venezolano de Mérida y Heritales (Portugal).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del realizador (Author) -->
+        <section id="author" class="container mx-auto px-4 py-16">
+            <div class="bg-white/10 p-8 md:p-12 rounded-2xl shadow-xl backdrop-blur-sm text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-10">El Realizador: Miguelángel Tisera</h2>
+                <div class="md:flex md:space-x-8 items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <img src="https://placehold.co/400x400/0ea5e9/ffffff?text=Miguelangel+Tisera" alt="Retrato de Miguelángel Tisera" class="rounded-full mx-auto shadow-lg mb-4">
+                    </div>
+                    <div class="md:w-2/3 text-left">
+                        <h3 class="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Biografía y Trayectoria</h3>
+                        <p class="text-lg mb-4">
+                            Miguelángel Tisera es un director, productor y guionista de cine y televisión argentino, nacido en Buenos Aires en 1958. Con una trayectoria que abarca varias décadas, ha desarrollado la mayor parte de su carrera profesional en Venezuela, país al que llegó en 1978. Su obra se caracteriza por una búsqueda constante de la poesía y la esencia cultural, explorando la identidad latinoamericana, las raíces ancestrales y la conexión entre el ser humano y su territorio.
+                        </p>
+                        <h3 class="text-2xl font-semibold mb-4 mt-8 border-b border-gray-400 pb-2">Filmografía Destacada</h3>
+                        <ul class="list-disc list-inside space-y-1 text-lg">
+                            <li>Vestigios de conocimientos ancestrales (2023)</li>
+                            <li>Vestigios de Conocimientos Ancestrales: Hallazgos (2015)</li>
+                            <li>Gaia (2014)</li>
+                            <li>Series documentales como “Manos y Cerebro” (1990-1991)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de la Tienda (Store) -->
+        <section id="store" class="container mx-auto px-4 py-16">
+            <div class="bg-white/10 p-8 md:p-12 rounded-2xl shadow-xl backdrop-blur-sm text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-10">Adquiere tu Copia</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="product-list">
+                    <!-- Los productos se renderizarán aquí con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del Blog (Blog) -->
+        <section id="blog" class="container mx-auto px-4 py-16">
+            <div class="bg-white/10 p-8 md:p-12 rounded-2xl shadow-xl backdrop-blur-sm text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-10">Blog: Novedades</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="blog-posts">
+                    <!-- Los posts del blog se renderizarán aquí con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contact" class="container mx-auto px-4 py-16">
+            <div class="bg-white/10 p-8 md:p-12 rounded-2xl shadow-xl backdrop-blur-sm">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Contacto</h2>
+                <form id="contact-form" class="max-w-xl mx-auto space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-medium mb-2">Nombre</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-white/20 border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium mb-2">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-white/20 border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-lg font-medium mb-2">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-lg bg-white/20 border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105">Enviar Mensaje</button>
+                    <div id="contact-message" class="mt-4 text-center text-lg font-semibold hidden"></div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 text-center py-8 mt-16 rounded-t-xl">
+        <div class="container mx-auto">
+            <p class="mb-4">© 2025 Vestigios de Conocimientos Ancestrales. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-300 hover:text-blue-500 transition-colors"><i class="fab fa-youtube text-2xl"></i></a>
+                <a href="#" class="text-gray-300 hover:text-blue-500 transition-colors"><i class="fab fa-facebook text-2xl"></i></a>
+                <a href="#" class="text-gray-300 hover:text-blue-500 transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Lógica del Frontend ---
+
+        // Menú de hamburguesa para móvil
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // --- Simulación de Backend y Contenido Dinámico ---
+
+        // Datos simulados para el blog (mock data)
+        const mockBlogPosts = [
+            {
+                id: 1,
+                title: "Estreno exitoso en el Festival de Cine Venezolano",
+                excerpt: "Vestigios de conocimientos ancestrales ha sido recibido con entusiasmo en el Festival de Cine Venezolano de Mérida...",
+                image: "https://placehold.co/600x400/1e293b/ffffff?text=Festival",
+                date: "2024-10-15"
+            },
+            {
+                id: 2,
+                title: "Detrás de Cámaras: El viaje al Alto Orinoco",
+                excerpt: "El rodaje en la selva amazónica fue una experiencia inolvidable. Te contamos los desafíos y hallazgos...",
+                image: "https://placehold.co/600x400/1e293b/ffffff?text=Rodaje",
+                date: "2024-11-20"
+            },
+            {
+                id: 3,
+                title: "Entrevista exclusiva con Miguelángel Tisera",
+                excerpt: "Hablamos con el realizador sobre su inspiración, el proceso creativo y el mensaje de su obra...",
+                image: "https://placehold.co/600x400/1e293b/ffffff?text=Entrevista",
+                date: "2024-12-05"
+            }
+        ];
+        
+        // Datos simulados para la tienda
+        const mockProducts = [
+            {
+                id: 1,
+                name: "Copia Digital",
+                description: "Acceso instantáneo para ver la película en streaming y descargarla.",
+                price: "9.99",
+                image: "https://placehold.co/400x500/1e293b/ffffff?text=Digital"
+            },
+            {
+                id: 2,
+                name: "Blu-ray Coleccionable",
+                description: "Película en alta definición con material extra y empaque especial.",
+                price: "19.99",
+                image: "https://placehold.co/400x500/1e293b/ffffff?text=Blu-ray"
+            },
+            {
+                id: 3,
+                name: "DVD Standard",
+                description: "Copia física de la película en formato DVD.",
+                price: "14.99",
+                image: "https://placehold.co/400x500/1e293b/ffffff?text=DVD"
+            }
+        ];
+
+        // Función para renderizar los posts del blog
+        function renderBlogPosts() {
+            const blogPostsContainer = document.getElementById('blog-posts');
+            blogPostsContainer.innerHTML = mockBlogPosts.map(post => `
+                <div class="bg-white/10 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow backdrop-blur-sm">
+                    <img src="${post.image}" alt="${post.title}" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold mb-2">${post.title}</h3>
+                    <p class="text-gray-300 mb-4">${post.excerpt}</p>
+                    <span class="text-sm text-gray-400">${post.date}</span>
+                </div>
+            `).join('');
+        }
+
+        // Función para renderizar los productos de la tienda
+        function renderProducts() {
+            const productListContainer = document.getElementById('product-list');
+            productListContainer.innerHTML = mockProducts.map(product => `
+                <div class="bg-white/10 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow backdrop-blur-sm flex flex-col justify-between">
+                    <img src="${product.image}" alt="${product.name}" class="rounded-lg mb-4 w-full h-64 object-cover">
+                    <h3 class="text-xl font-semibold mb-2">${product.name}</h3>
+                    <p class="text-gray-300 mb-4">${product.description}</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span class="text-2xl font-bold">$${product.price}</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-transform transform hover:scale-105 buy-button" data-product-id="${product.id}">Comprar</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Añadir event listeners a los botones de compra
+            document.querySelectorAll('.buy-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = e.target.dataset.productId;
+                    alert(`Has añadido el producto ${productId} al carrito (Simulación).`);
+                });
+            });
+        }
+        
+        // Manejo del formulario de contacto
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formMessage = document.getElementById('contact-message');
+            formMessage.textContent = 'Mensaje enviado. ¡Gracias por contactarnos!';
+            formMessage.classList.remove('hidden');
+            formMessage.classList.add('text-green-400');
+            this.reset();
+        });
+
+        // Inicializar el contenido dinámico al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            renderBlogPosts();
+            renderProducts();
+        });
+
+    </script>
+
+</body>
+</html>
